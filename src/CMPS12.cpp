@@ -30,10 +30,10 @@ calstat_t CMPS12::getCalStat()
 	uint8_t cal = getCalStatRaw();
 	if(cal == 0xFF) return CAL_HIGH;
 	uint8_t cal_s = cal >> 6;
-	uint8_t cal_g = (cal >> 4) & 0x03;
-	uint8_t cal_a = (cal >> 2) & 0x03;
+	// uint8_t cal_g = (cal >> 4) & 0x03;
+	// uint8_t cal_a = (cal >> 2) & 0x03;
 	uint8_t cal_m = cal & 0x03;
-	if(cal_s == 0 | cal_m == 0) return CAL_LOW;
+	if((cal_s == 0) | (cal_m == 0)) return CAL_LOW;
 	return CAL_MED;
 };
 
