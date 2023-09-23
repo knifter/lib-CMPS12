@@ -149,7 +149,7 @@ bool CMPS14::eraseCal()
 	return _last_error == 0;
 };
 
-bool CMPS14::calConfig(bool periodic_save, bool gyrocal, bool accelcal, bool magcal)
+bool CMPS14::setCalConfig(bool periodic_save, bool gyrocal, bool accelcal, bool magcal)
 {
 	uint8_t settings = 0x80;
 	if(periodic_save)

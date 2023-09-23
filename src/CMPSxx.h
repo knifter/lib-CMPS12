@@ -82,10 +82,11 @@ class CMPS14 : public TwoWireDevice
 
 		bool storeCal();
 		bool eraseCal();
-		bool calConfig(bool periodic_save, bool gyrocal, bool accelcal, bool magcal);
 		bool setAddress(uint8_t address);
+		bool setCalConfig(bool periodic_save, bool gyrocal, bool accelcal, bool magcal);
 
 	private:
+
 		typedef enum : uint8_t
 		{
 			REG_COMMAND = 0x00,
